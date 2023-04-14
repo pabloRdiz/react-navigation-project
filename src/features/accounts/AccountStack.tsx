@@ -7,6 +7,8 @@ import AccountTwo from './components/AccountTwo';
 const StackNavigator = createStackNavigator();
 
 const AccountStack = () => {
+  console.log('🚀 turbo-cl ~ file: AccountStack.tsx:18 ~ AccountStack ~ ');
+
   return (
     <StackNavigator.Navigator>
       <StackNavigator.Screen name="Account" component={Account} />

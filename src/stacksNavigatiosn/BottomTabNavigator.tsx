@@ -2,8 +2,8 @@ import * as React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 // import TabBar from '../components/TabBar';
 import Home from '../components/Home';
-import Payment from '../components/Payment';
-import AccountStack from './FeaturesStacks/Accounts/AccountStack';
+import AccountStack from '../features/accounts/AccountStack';
+import PaymentStack from '../features/payments/PaymentStack';
 
 const TabNavigator = createBottomTabNavigator();
 
@@ -14,7 +14,11 @@ const BottomTabNavigator = () => {
     // screenOptions={{...tabScreenOptions, unmountOnBlur: true }}
     >
       <TabNavigator.Screen name="Home" component={Home} />
-      <TabNavigator.Screen name="Payment" component={Payment} />
+      <TabNavigator.Screen
+        name="Payment"
+        component={PaymentStack}
+        options={{headerShown: false}}
+      />
       <TabNavigator.Screen
         name="Account"
         component={AccountStack}

@@ -1,7 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import PublicOne from '../components/publics/PublicOne';
-import PublicTwo from '../components/publics/PublicTwo';
+import PublicOne from '../../components/publics/PublicOne';
+import PublicTwo from '../../components/publics/PublicTwo';
 
 const StackNavigator = createStackNavigator();
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import OnboardingStackNavigation from './OnboardingStackNavigation';
-import BottomTabNavigator from './BottomTabNavigator';
+import OnboardingStackNavigation from '../features/onboarding/OnboardingStackNavigation';
 import {useAuth} from '../hooks/useAuth';
 import Welcome from '../components/publics/Welcome';
+import DrawerNavigation from './DrawerNavigation';
 
 const StackNavigator = createStackNavigator();
 
@@ -13,7 +13,7 @@ const MainStackNavigation = () => {
   return (
     <StackNavigator.Navigator headerMode="none">
       {authenticated && (
-        <StackNavigator.Screen name="inside" component={BottomTabNavigator} />
+        <StackNavigator.Screen name="inside" component={DrawerNavigation} />
       )}
       {!authenticated && (
         <>
